@@ -1,12 +1,14 @@
 import { Configuration, OpenAIApi } from "openai";
 import express from "express";
 import bodyParser from "body-parser";
-import cors from "cors"res.json(completion.data.choices[0].message);;
+import cors from "cors"
+import { APIKEY, ORGANIZATION } from "./constants";
+
 
 
 const configuration = new Configuration({
-    organization: "",
-    apiKey: ""
+    organization: ORGANIZATION,
+    apiKey: APIKEY
 });
 
 const openai = new OpenAIApi(configuration);
